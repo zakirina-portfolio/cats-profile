@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>    
+        <meta charset="UTF-8">
+        <title>杏ちゃんのプロフィール</title>
+        <meta name="description" content="我が家の猫ちゃんの紹介">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->    
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Poiret+One&display=swap" rel="stylesheet">
+    </head>
+<body class="profile-page">
+    <header class="site-header">
+        <h1 class="site-title">My Lovely Cats</h1>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="anzu.html" class="active">杏ちゃん</a></li>
+                <li><a href="kurumi.html">胡桃ちゃん</a></li>
+                <li><a href="milk.html">ミルクちゃん</a></li>
+                <li><a href="moka.html">モカちゃん</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="anzu.html" class="active">杏ちゃん</a></li>
+                <li><a href="kurumi.html">胡桃ちゃん</a></li>
+                <li><a href="milk.html">ミルクちゃん</a></li>
+                <li><a href="moka.html">モカちゃん</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="profile-section">
+            <div class="profile-inner">
+                <section class="profile">
+                    <img src="images/cats/anzu.png" alt="杏ちゃん" class="profile-photo">
+                    <div class="profile-text">
+                        <h3>杏ちゃん</h3>
+                        <p>種類：三毛猫</p>
+                        <p>年齢：９才</p>
+                        <p>性別：女の子</p>
+                        <p>性格：気まぐれな女王様</p>
+                        <p>好きなもの：カニカマ</p>
+                    </div>
+                </section>
+            </div>            
+        </section>
+
+    <main class="profile-container">
+        <section class="gallery">
+            <h3>杏ちゃんの写真集</h3>
+            <div class="gallery-photos">
+                <img src="images/galleries/anzu/anzu-01.jpg" alt="杏ちゃん１">
+                <img src="images/galleries/anzu/anzu-02.jpg" alt="杏ちゃん２">
+                <img src="images/galleries/anzu/anzu-03.jpg" alt="杏ちゃん３">
+                <img src="images/galleries/anzu/anzu-04.jpg" alt="杏ちゃん４">
+
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+
+        <p><small>&copy; 2025 zakirina</small></p>
+    </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+
+        hamburger.addEventListener('click', () => {
+            if (mobileNav.style.display === 'block') {
+                mobileNav.style.display = 'none';
+            } else {
+                mobileNav.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

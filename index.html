@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>うちの猫ちゃんたち</title>
+        <meta name="description" content="我が家の猫ちゃんの紹介">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">    
+        <link rel="stylesheet" href="style.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Poiret+One&display=swap" rel="stylesheet">
+    </head>
+    
+    <body class="top-page">
+        <header class="hero-section">
+            <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="anzu.html" class="active">杏ちゃん</a></li>
+                <li><a href="kurumi.html">胡桃ちゃん</a></li>
+                <li><a href="milk.html">ミルクちゃん</a></li>
+                <li><a href="moka.html">モカちゃん</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="anzu.html">杏ちゃん</a></li>
+                <li><a href="kurumi.html">胡桃ちゃん</a></li>
+                <li><a href="milk.html">ミルクちゃん</a></li>
+                <li><a href="moka.html">モカちゃん</a></li>
+            </ul>
+        </nav>
+            
+            <div class="title-text">
+                <h1>My<br>Lovely<br>Cats</h1>
+            </div>
+            <div class="main-visual">   
+                <img src="images/main/main-01.jpg" alt="メインの猫ちゃんの写真" class="main-photo active">
+                <img src="images/main/main-02.jpg" alt="メインの猫ちゃんの写真" class="main-photo">
+                <img src="images/main/main-03.jpg" alt="メインの猫ちゃんの写真"class="main-photo">
+                <img src="images/main/main-04.jpg" alt="メインの猫ちゃんの写真"class="main-photo">
+            </div>    
+        </header>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About</h2>
+                <p>私の日々を癒してくれるかわいい猫ちゃんたちを紹介します。</p>
+            </div>    
+        </section>
+        
+        <section id="cats" class="cats-area">
+            <div class="container">
+                <h2>Cats</h2>
+                <div class="cat-box">
+                    <a href="anzu.html">
+                        <img src="images/cats/anzu.png" alt="三毛猫の杏ちゃん">
+                    </a>
+                    <div class="cat-text">
+                        <h3>杏ちゃん</h3>
+                        <p>気まぐれでちょっぴり女王様気質。お気に召さないとぷいっとどこかへ行ってしまう。でも甘えたい時は全力で甘えるツンデレさん。なぜか私のくしゃみにご立腹…くしゃみは禁物です。</p>
+                    </div>
+                </div>
+                
+                <div class="cat-box reverse">    
+                    <a href="kurumi.html">
+                        <img src="images/cats/kurumi.png" alt="サバトラの胡桃ちゃん">
+                    </a>
+                    <div class="cat-text">
+                        <h3>胡桃ちゃん</h3>
+                        <p>下の子にはちょっぴり強気なお姉さん。でもママの杏ちゃんには頭が上がらない。撫でてもらうのが何より好きな、甘えん坊のツンツン娘。</p>
+                    </div> 
+                </div>        
+                
+                <div class="cat-box">
+                    <a href="milk.html">
+                        <img src="images/cats/milk.png" alt="白猫のミルクちゃん">
+                    </a>        
+                    <div class="cat-text">
+                        <h3>ミルクちゃん</h3>
+                        <p>穏やかな甘えん坊。気づけばいつも足元に。つぶらな瞳とおっさん座りのギャップがチャームポイント。</p>
+                    </div>    
+                </div>
+                 
+                <div class="cat-box reverse">       
+                    <a href="moka.html">
+                        <img src="images/cats/moka.png" alt="茶トラのモカちゃん"> 
+                    </a>
+                    <div class="cat-text">
+                        <h3>モカちゃん</h3>
+                        <p>末っ子だけど食欲はナンバーワン！お気に入りの場所は譲らないちょっぴり気の強い子。でも胡桃ちゃんにはなぜか頭が上がらない…？</p>
+                    </div>     
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p><small>&copy; 2025 zakirina</small></p>
+        </footer>
+    <script>
+        const images = document.querySelectorAll('.main-photo');
+        let current = 0;
+
+        setInterval(() => {
+            images[current].classList.remove('active');
+            current = (current + 1) % images.length;
+            images[current].classList.add('active');
+        }, 5000);
+
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+
+        hamburger.addEventListener('click', () => {
+            if (mobileNav.style.display === 'block') {
+                mobileNav.style.display = 'none';
+            } else {
+                mobileNav.style.display = 'block';
+            }
+        });
+    </script>
+    </body>
+</html>
